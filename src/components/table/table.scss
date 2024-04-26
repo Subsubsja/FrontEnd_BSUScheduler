@@ -1,0 +1,89 @@
+#table-schedule {
+  width: 100%;
+
+  * {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10px;
+  }
+
+  td {
+    border: 1px solid black;
+    padding: 0.25rem;
+  }
+
+  td:has(input:focus),
+  td:has(textarea:focus) {
+    border: 2px solid rgb(0, 150, 0);
+    box-sizing: border-box;
+  }
+
+  td:has(.search:focus) {
+    border: 0;
+  }
+
+  input,
+  textarea {
+    text-align: center;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  textarea::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Print settings
+@page {
+}
+
+@media print {
+  * {
+    visibility: hidden;
+  }
+
+  body {
+    zoom: 50%;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: "";
+  }
+
+  #table-schedule,
+  #table-schedule * {
+    visibility: visible;
+    font-size: 16px;
+  }
+
+  #table-schedule {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #faculty-select {
+    padding: 0;
+    border: 0;
+  }
+
+  .lucide {
+    display: none;
+  }
+}
