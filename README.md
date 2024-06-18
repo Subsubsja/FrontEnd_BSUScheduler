@@ -136,4 +136,3 @@ npm dev
 ```
 
 > This will run the application at http://localhost:5173/
-# FrontEnd_BSUScheduler
